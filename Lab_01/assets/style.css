@@ -1,0 +1,110 @@
+html {
+      background-color: #DDBEAA;
+      height: 100vh;
+}
+
+body {
+      height: 100vh;
+      margin: 0;
+}
+
+.main-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.main-container li {
+    font-size: 20px;
+}
+.main-container h1 {
+    font-size: 50px;
+}
+#ex1 {
+    color: crimson;
+}
+#ex2 {
+    color: ghostwhite;
+}
+#ex3{
+    color: seagreen;
+}
+h1 {
+    color: Black;
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+}
+h2 {
+    color: blue;
+    font-size: 25px;
+    margin-right: 10%;
+    text-align: right;
+}
+object {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.produkty {
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.produkty td{
+    border: 2.5px solid #333;
+    padding: .25rem .75rem;
+    text-align: Right;
+}
+
+.produkty th{
+    border: 2.5px solid #333;
+    padding: .25rem .75rem;
+    text-align: center;
+}
+
+.pola r1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: calc(2 * 100px + 1 * 12px);
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pola r2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: calc(3 * 100px + 2 * 12px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 auto;
+}
+.c1 {
+    background: #e53935;
+}
+.c2 {
+    background: #43a047;
+}
+.c4 {
+    background: #1a2333;
+}
+.c5 {
+    background: #fb8c00;
+}
+.as-img {
+    object-fit: cover;
+    display: block;
+}
+
