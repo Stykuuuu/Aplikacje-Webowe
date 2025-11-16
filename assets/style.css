@@ -1,0 +1,176 @@
+/* ====== Cienie nad Wisłą — Style ====== */
+
+/* Paleta (CSS variables) */
+:root {
+    --bg: #0b0f14;
+    --surface: #121820;
+    --card: #0f141b;
+    --text: #e8edf4;
+    --muted: #9aa3af;
+    --accent: #f5a524;  /* bursztyn */
+    --accent2: #6fc3df; /* chłodny błękit */
+    --border: color-mix(in srgb, var(--text) 12%, transparent);
+}
+:root.light {
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --card: #ffffff;
+    --text: #0b1220;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent2: #9333ea;
+}
+
+/* Reset & baza */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: clamp(48px, 6vh, 120px); /* „powietrze” pod końcem treści */
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; margin: 0 0 .6rem; line-height: 1.25; }
+.section-title { margin: 0 0 1rem; }
+
+.container { width: min(1100px, 92vw); margin-inline: auto; }
+
+.visually-hidden { position: absolute; left: -9999px; }
+
+/* Przyciski */
+.btn {
+    display: inline-block;
+    padding: .8rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform .15s ease, background .2s ease, color .2s ease;
+    cursor: pointer;
+}
+.btn:hover { transform: translateY(-1px); background: var(--accent); color: #0b1220; }
+.btn.primary { background: var(--accent); color: #0b1220; border-color: transparent; }
+.btn.primary:hover { filter: brightness(1.06); }
+
+/* Header / Nav */
+.site-header {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+}
+.header-inner { display: flex; align-items: center; gap: 1rem; padding: .8rem 0; }
+.logo { font-weight: 800; color: var(--text); text-decoration: none; }
+.site-nav { margin-left: auto; }
+.nav-toggle { display: none; }
+.nav-links { list-style: none; display: flex; gap: .6rem; margin: 0; padding: 0; }
+.nav-links a {
+    color: var(--text); text-decoration: none; padding: .45rem .9rem; border-radius: 999px;
+}
+.nav-links a.active, .nav-links a:hover {
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+/* Theme toggle */
+.theme-toggle {
+    margin-left: .5rem;
+    background: var(--card); color: var(--text);
+    border: 1px solid var(--border);
+    padding: .45rem .7rem; border-radius: 10px; cursor: pointer;
+}
+
+/* HERO */
+.hero { padding: 3rem 0 2rem; background: radial-gradient(1200px 600px at 10% -10%, color-mix(in srgb, var(--accent) 20%, transparent), transparent); }
+.hero-inner { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 2rem; }
+.hero-text .tagline { color: var(--muted); margin: 0 0 .2rem; }
+.hero-text .lead { margin: 0 0 1rem; }
+.hero-media img { width: 100%; height: auto; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+
+/* Features (karty) */
+.features { padding: 2rem 0; }
+.features-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr); }
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem 1.2rem;
+}
+
+/* Fabuła + CTA band */
+.plot { padding: 1rem 0 2rem; }
+.cta-band { padding: 1rem 0 2rem; }
+.cta-inner { display: grid; gap: .6rem; }
+
+/* Newsletter */
+.newsletter { padding: .5rem 0 2.5rem; }
+.newsletter-form { display: flex; gap: .6rem; flex-wrap: wrap; }
+input[type="text"], textarea, select {
+    width: 100%; max-width: 520px;
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: .8rem .9rem; outline: none;
+}
+input[type="text"]:focus, textarea:focus, select:focus { border-color: var(--accent); }
+.form-msg { display: block; margin-top: .4rem; color: var(--accent2); min-height: 1.25rem; }
+
+/* Galeria */
+.gallery-grid {
+    display: grid; gap: .8rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 1rem 0 2rem;
+}
+.gallery-grid img {
+    width: 100%; height: 220px; object-fit: cover; border-radius: 12px;
+    border: 1px solid var(--border);
+}
+.promo-video { width: 100%; max-width: 900px; border-radius: 12px; display: block; }
+/* Upewnij się, że nic nie nakrywa <video> */
+.promo-video { position: relative; z-index: 1; pointer-events: auto; }
+.promo-video * { pointer-events: auto; } /* na wszelki wypadek */
+
+/* Kontakt */
+.contact-form { display: grid; gap: .9rem; max-width: 620px; }
+.form-row { display: grid; gap: .4rem; }
+.form-actions { margin-top: .4rem; }
+
+/* Footer */
+.site-footer { margin-top: auto; border-top: 1px solid var(--border); }
+.footer-inner { padding: 1rem 0; display: flex; justify-content: space-between; gap: .6rem; flex-wrap: wrap; color: var(--muted); }
+.footer-inner a { color: var(--muted); }
+
+/* Modal (teaser) */
+.modal {
+    position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
+    background: rgba(0,0,0,.65);
+    padding: 1rem;
+}
+.modal-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: .8rem;
+    width: min(900px, 96vw);
+}
+.modal-actions { display: flex; justify-content: flex-end; gap: .5rem; margin-top: .4rem; }
+
+/* Schowany tekst */
+.hidden { display: none !important; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+    .nav-toggle { display: inline-block; }
+    .nav-links {
+        position: absolute; right: 1rem; top: 64px; background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px; padding: .5rem; display: none; flex-direction: column; min-width: 180px;
+    }
+    .nav-links.open { display: flex; }
+}
