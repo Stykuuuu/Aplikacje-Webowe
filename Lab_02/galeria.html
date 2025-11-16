@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cienie nad Wisłą — Galeria</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script defer src="assets/app.js"></script>
+</head>
+<body data-page="galeria">
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">Cienie nad Wisłą</a>
+        <nav class="site-nav" aria-label="Główna nawigacja">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="galeria.html">Galeria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Przełącz motyw">🌓</button>
+    </div>
+</header>
+
+<main class="site-main">
+    <section class="container">
+        <h1>Galeria</h1>
+        <p>Klimatyczne kadry z planu oraz krótki teaser.</p>
+
+        <div class="gallery-grid">
+            <img src="https://picsum.photos/seed/wisla1/800/600" alt="Most o świcie spowity mgłą" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla2/800/600" alt="Latarnia na bulwarach odbijająca się w wodzie" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla3/800/600" alt="Ulica Kazimierza po deszczu" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla4/800/600" alt="Notatki rozłożone na stole montażowym" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla5/800/600" alt="Zbliżenie na taśmę magnetyczną" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla6/800/600" alt="Światła miasta w szkle okularów" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla7/800/600" alt="Most kolejowy nocą, przejeżdżający pociąg" loading="lazy">
+            <img src="https://picsum.photos/seed/wisla8/800/600" alt="Ręce w rękawiczkach trzymające starą kasetę" loading="lazy">
+        </div>
+
+        <h2>Teaser</h2>
+        <video class="promo-video" controls preload="none" playsinline
+               poster="https://picsum.photos/seed/poster-wisla/1280/720">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4">
+            Twoja przeglądarka nie wspiera elementu <code>video</code>.
+        </video>
+
+
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Cienie nad Wisłą • Projekt: <strong>Paweł Styk</strong></p>
+    </div>
+</footer>
+</body>
+</html>

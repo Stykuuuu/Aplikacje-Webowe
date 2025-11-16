@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Cienie nad Wisłą — Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script defer src="assets/app.js"></script>
+</head>
+<body data-page="home">
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">Cienie nad Wisłą</a>
+        <nav class="site-nav" aria-label="Główna nawigacja">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul id="nav-links" class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Przełącz motyw">🌓</button>
+    </div>
+</header>
+
+<main class="site-main">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Cienie nad Wisłą</h1>
+                <p class="tagline"><em>Prawda budzi się po zmroku.</em></p>
+                <p class="lead">
+                    Nocny pożar na barce uruchamia lawinę zdarzeń, które prowadzą dziennikarkę do sprawy sprzed dwudziestu lat.
+                    W labiryncie wąskich ulic i mgły nad rzeką każdy krok zostawia ślad, a każde kłamstwo ma swoją cenę.
+                    <strong>Cienie nad Wisłą</strong> to thriller o pamięci, winie i wyborach, których nie da się cofnąć.
+                </p>
+                <div class="hero-cta">
+                    <a class="btn primary" href="galeria.html">Zobacz galerię</a>
+                    <button id="openTeaser" class="btn">Obejrzyj teaser</button>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="https://picsum.photos/seed/krakow-wisla/900/600"
+                     alt="Plakat: nocna panorama Wisły z mgłą i światłami miasta">
+            </div>
+        </div>
+    </section>
+
+    <!-- O FILMIE -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">O filmie</h2>
+            <div class="features-grid">
+                <article class="card">
+                    <h3>Obsada</h3>
+                    <p><strong>Marta Krawiec</strong> — dziennikarka śledcza<br>
+                        <strong>Oskar Grot</strong> — strażak-ratownik<br>
+                        <strong>Róża Ledóch</strong> — archiwistka</p>
+                </article>
+                <article class="card">
+                    <h3>Twórcy</h3>
+                    <p>Reżyseria: <strong>Klara Turska</strong><br>
+                        Scenariusz: <strong>Adam Mirek</strong><br>
+                        Muzyka: <strong>INA</strong></p>
+                </article>
+                <article class="card">
+                    <h3>Lokalizacje</h3>
+                    <p>Kazimierz • Podgórze • Bulwary Wiślane • Stare Zabłocie</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FABUŁA -->
+    <section class="plot">
+        <div class="container">
+            <h2 class="section-title">Fabuła (bez spoilerów)</h2>
+            <p>Pożar na opuszczonej barce to tylko zapalnik. Marta szybko odkrywa, że zniknięcie sprzed dwóch dekad
+                łączy się z siecią powiązań, które do dziś oplatają miasto.</p>
+            <p class="more hidden">Ze strzępów nagrań, wycinków prasowych i zapomnianych taśm rodzi się obraz, w którym nie ma niewinnych.
+                Im bliżej finału, tym bardziej rzeka milknie.</p>
+            <button id="togglePlot" class="btn">Pokaż więcej</button>
+        </div>
+    </section>
+
+    <!-- PREMiera / WYRÓŻNIENIA -->
+    <section class="cta-band">
+        <div class="container cta-inner">
+            <p><strong>Premiera:</strong> 17 października 2025 • <strong>Selekcja:</strong> Nocne Kadry Fest</p>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER (walidacja) -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Zostań na bieżąco</h2>
+            <form id="newsletterForm" class="newsletter-form" novalidate>
+                <label class="visually-hidden" for="newsEmail">Adres e-mail</label>
+                <input id="newsEmail" name="newsEmail" type="text" placeholder="np. anna.nowak@example.com">
+                <button class="btn primary" type="submit">Zapisz mnie</button>
+                <small class="form-msg" aria-live="polite"></small>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Cienie nad Wisłą • Projekt: <strong>Paweł Styk</strong></p>
+    </div>
+</footer>
+</body>
+</html>

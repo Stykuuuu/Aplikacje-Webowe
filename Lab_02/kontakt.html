@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cienie nad Wisłą — Kontakt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script defer src="assets/app.js"></script>
+</head>
+<body data-page="kontakt">
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">Cienie nad Wisłą</a>
+        <nav class="site-nav" aria-label="Główna nawigacja">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a class="active" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Przełącz motyw">🌓</button>
+    </div>
+</header>
+
+<main class="site-main">
+    <section class="container">
+        <h1>Kontakt</h1>
+        <p>Masz pytanie lub chcesz nawiązać współpracę? Napisz do nas.</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="text" placeholder="np. anna.nowak@example.com" required>
+            </div>
+
+            <div class="form-row">
+                <label for="topic">Temat wiadomości</label>
+                <select id="topic" name="topic" required>
+                    <option value="">— wybierz temat —</option>
+                    <option>Współpraca</option>
+                    <option>Media / Akredytacja</option>
+                    <option>Pytanie ogólne</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" rows="6" placeholder="Twoja wiadomość..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <input class="btn primary" type="submit" value="Wyślij">
+            </div>
+            <small class="form-msg" aria-live="polite"></small>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Cienie nad Wisłą • Projekt: <strong>Paweł Styk</strong></p>
+    </div>
+</footer>
+</body>
+</html>
