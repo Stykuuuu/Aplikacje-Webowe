@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Flappy Bird — Lab 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body{margin:0;background:#111;display:grid;place-items:center;min-height:100svh}
+    #wrap{display:grid;gap:8px;justify-items:center}
+    canvas{background:#87CEEB;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .ui{color:#eee;font:600 14px/1.2 system-ui,Segoe UI,Arial,sans-serif;opacity:.85}
+    .btn{appearance:none;border:1px solid #4f9cff;background:#4f9cff;color:#0b0f14;
+        border-radius:999px;padding:.5rem .9rem;font-weight:700;cursor:pointer}
+</style>
+
+<div id="wrap">
+    <canvas id="game" width="480" height="640"></canvas>
+    <div class="ui">Spacja/klik = skok • G = tryb ducha • T = teleport • P = pauza • R = restart</div>
+    <button id="restart" class="btn" hidden>Restart</button>
+</div>
+
+<script type="module" src="assets/flappy-main.js"></script>

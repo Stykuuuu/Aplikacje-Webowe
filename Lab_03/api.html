@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><title>Ćw.3 – Produkty z API</title>
+<link rel="stylesheet" href="assets/style.css">
+<nav><a href="index.html">← Powrót</a></nav>
+<h2>Ćw.3 – Produkty z API</h2>
+
+<input id="q" placeholder="Szukaj...">
+<select id="sort">
+    <option value="orig">oryginalna kolejność</option>
+    <option value="asc">rosnąco (tytuł)</option>
+    <option value="desc">malejąco (tytuł)</option>
+</select>
+
+<div style="overflow:auto">
+    <table id="tbl" border="1" style="border-collapse:collapse; width:100%">
+        <thead><tr><th>zdjęcie</th><th>tytuł</th><th>opis</th></tr></thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script defer src="assets/api.js"></script>

@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><title>Ćw.2 – Generator haseł</title>
+<link rel="stylesheet" href="assets/style.css">
+<nav><a href="index.html">← Powrót</a></nav>
+<h2>Ćw.2 – Generator haseł</h2>
+
+<label>Min długość <input id="minLen" type="number" value="8" min="1"></label>
+<label>Maks długość <input id="maxLen" type="number" value="12" min="1"></label>
+<label><input id="caps" type="checkbox"> Wielkie litery</label>
+<label><input id="special" type="checkbox"> Znaki specjalne</label>
+
+<div class="row">
+    <button id="gen">Wygeneruj hasło</button>
+</div>
+
+<!-- NOWE: miejsce na wynik i komunikat -->
+<div id="pw" class="pw" aria-live="polite"></div>
+<p id="msg" class="muted" aria-live="polite"></p>
+
+<script defer src="assets/generator.js"></script>

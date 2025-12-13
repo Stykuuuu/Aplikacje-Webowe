@@ -1,0 +1,99 @@
+/* ===== Lab 3 – wspólny styl ===== */
+
+/* Paleta + typografia */
+:root{
+    --bg:#0b0f14; --surface:#121820; --card:#0f141b;
+    --text:#e8edf4; --muted:#9aa3af;
+    --accent:#4f9cff; --accent2:#f5a524; /* niebieski + bursztyn */
+    --border: rgba(255,255,255,.12);
+    --radius:12px;
+    --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+@media (prefers-color-scheme: light){
+    :root{
+        --bg:#f6f8fb; --surface:#ffffff; --card:#ffffff;
+        --text:#0b1220; --muted:#606a78;
+        --border: rgba(0,0,0,.12);
+    }
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--text); background:var(--bg);
+    min-height:100vh; display:flex; flex-direction:column;
+}
+.container{width:min(980px,92vw); margin:32px auto}
+
+/* Nagłówki / nawigacja */
+h1,h2{margin:0 0 .6rem}
+h1{font-size:clamp(24px,4vw,34px)}
+h2{font-size:clamp(20px,3vw,26px); opacity:.95}
+
+nav{background:color-mix(in srgb, var(--surface) 95%, transparent);
+    border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10}
+nav .nav-inner{display:flex; gap:12px; align-items:center;
+    width:min(980px,92vw); margin-inline:auto; padding:.7rem 0}
+nav a{color:var(--text); text-decoration:none; padding:.35rem .7rem; border-radius:999px}
+nav a:hover{background:color-mix(in srgb, var(--accent) 18%, transparent)}
+
+/* Sekcje / karty */
+section{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+    padding:16px 18px; margin:18px 0; box-shadow:var(--shadow)}
+section > p{margin:.2rem 0 .8rem}
+
+/* Formularze i przyciski */
+label{display:inline-flex; align-items:center; gap:8px; margin:6px 10px 6px 0}
+input[type="number"], input[type="text"], select, textarea{
+    background:var(--card); color:var(--text);
+    border:1px solid var(--border); border-radius:10px;
+    padding:.55rem .7rem; outline:none; min-width:120px;
+}
+input:focus, select:focus, textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent)}
+
+button, .btn{
+    appearance:none; border:1px solid var(--accent); color:var(--bg);
+    background:var(--accent); font-weight:600; cursor:pointer;
+    padding:.55rem .9rem; border-radius:999px; transition:transform .12s ease, filter .2s ease;
+}
+button.secondary{background:transparent; color:var(--text); border-color:var(--border)}
+button:hover,.btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+button:disabled{opacity:.6; cursor:not-allowed}
+
+/* Stoper */
+#time{
+    font-size:clamp(28px,6vw,44px);
+    font-weight:800; letter-spacing:.5px;
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:.6rem .9rem; display:inline-block; margin:.2rem 0 1rem
+}
+#stoper .actions{display:flex; gap:8px; flex-wrap:wrap}
+
+/* Tabela (API) */
+table{width:100%; border-collapse:collapse}
+th, td{padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top}
+thead th{position:sticky; top:0; background:var(--surface); z-index:1}
+tbody tr:hover{background:color-mix(in srgb, var(--accent) 10%, transparent)}
+td img{border-radius:8px; border:1px solid var(--border)}
+
+/* Helpery */
+.row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.muted{color:var(--muted)}
+.center{text-align:center}
+
+/* Stopka */
+footer{margin-top:auto; color:var(--muted); border-top:1px solid var(--border)}
+footer .inner{width:min(980px,92vw); margin-inline:auto; padding:12px 0}
+
+/* Responsywność */
+@media (max-width:700px){
+    nav .nav-inner{justify-content:space-between}
+    label{width:100%}
+    input[type="number"], input[type="text"], select, textarea{width:100%}
+}
+.pw{
+    margin-top:10px; padding:10px 12px; border:1px dashed var(--border);
+    border-radius:8px; background:var(--card); font-family:ui-monospace,Consolas,monospace;
+    word-break:break-all;
+}
